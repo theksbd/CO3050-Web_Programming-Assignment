@@ -20,48 +20,58 @@
   $item = mysqli_fetch_array($result);
 ?>
 
-    <!-- Script for quantity increase/decrease -->
-    <script>
-        function increment() {
-            var value = parseInt(document.getElementById('demoInput').value, 10);
-            value = isNaN(value) ? 0 : value;
-            value++;
-            document.getElementById('demoInput').value = value;
-            document.getElementById('quantity').innerHTML= value;
-            }
-        function decrement() {
-            var value = parseInt(document.getElementById('demoInput').value, 10);
-            value = isNaN(value) ? 0 : value;
-            value < 1 ? value = 1 : '';
-            value--;
-            document.getElementById('demoInput').value = value;
-            document.getElementById('quantity').innerHTML= value;
-        }
-    </script>
+<!-- Script for quantity increase/decrease -->
+<script>
+function increment() {
+  var value = parseInt(document.getElementById('demoInput').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('demoInput').value = value;
+  document.getElementById('quantity').innerHTML = value;
+}
+
+function decrement() {
+  var value = parseInt(document.getElementById('demoInput').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('demoInput').value = value;
+  document.getElementById('quantity').innerHTML = value;
+}
+</script>
 
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/item.css">
-    <title>Young Green</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="css/item.css">
+  <title>Young Green</title>
 </head>
 <style>
-    <?php include 'css/item.css'; ?>
-    <?php include 'css/footer.css';?>
+<?php include 'css/item.css';
+?><?php include 'css/footer.css';
+?>
 </style>
+
 <body>
-    <?php include"layout/navigation.php";?>
-    
-    <div class="container">
-        <?php 
+  <?php include"layout/navigation.php";?>
+
+  <div class="container">
+    <?php 
         echo
         '
             <div class="product-container">
@@ -108,16 +118,16 @@
             </div>
         ';
         ?>
-        <div class="comment-container">
-            <!-- show comment -->
-            <?php
+    <div class="comment-container">
+      <!-- show comment -->
+      <?php
             require_once("services/connect_db.php");
             $productid = $_GET['id'];
             $getCommentsQuery = "select * from comments where productid = $productid";
             $allCommentsOfProducts = mysqli_query($connect, $getCommentsQuery);
             // $comments = 
             ?>
-            <?php
+      <?php
             if(mysqli_num_rows($allCommentsOfProducts)==0):
             echo"<h2 style='color:green'>Không có đánh giá nào!</h2>";
             echo'
@@ -134,12 +144,13 @@
                     ';
             else:
             ?>
-            <div class="comment-header">
-                <h3>Đánh giá sản phẩm: </h2>
-                <h3 class="comment-number" style="font-style:italic">(<?=mysqli_num_rows($allCommentsOfProducts)?> đánh giá)</h3>
-            </div>
-            <!-- comment -->
-            <?php
+      <div class="comment-header">
+        <h3>Đánh giá sản phẩm: </h2>
+          <h3 class="comment-number" style="font-style:italic">(<?=mysqli_num_rows($allCommentsOfProducts)?> đánh giá)
+          </h3>
+      </div>
+      <!-- comment -->
+      <?php
                 if(isset($_SESSION["user"])){
                 echo'
                     <section>
@@ -155,21 +166,22 @@
                     ';
                 }
                 ?>
-            <?php
+      <?php
             foreach($allCommentsOfProducts as $comment):
             ?>
-            <div class="comment-content">
-                <section style='font-weight:bold;' >Tài khoản: <span><?=$comment['account']?></span></section>
-                <section style='padding-left:1%;' >Nội dung đánh giá: <?=$comment['content']?></section>
-            </div>
-            <?php
+      <div class="comment-content">
+        <section style='font-weight:bold;'>Tài khoản: <span><?=$comment['account']?></span></section>
+        <section style='padding-left:1%;'>Nội dung đánh giá: <?=$comment['content']?></section>
+      </div>
+      <?php
             endforeach;
             endif;
             $connect->close();
             ?>
-            
-        </div>
+
     </div>
-<?php include 'layout/footer.php'; ?>
+  </div>
+  <?php include 'layout/footer.php'; ?>
 </body>
+
 </html>

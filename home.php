@@ -67,20 +67,24 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/home.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
 </body>
+
 </html>
 
 <div class="container" style="margin-top: 2rem;">
-      <div class="section-header">
-        <?php
+  <div class="section-header">
+    <?php
         if (!isset($_GET["search"]))
           echo
           '<h3>Sản phẩm</h3>
@@ -90,16 +94,16 @@
           '<h3>Kết quả tìm kiếm: ' .$search. '</h3>';
         }
         ?>
-      </div>
-      <div class="owl-carousel new owl-theme">
-        <div class="card-container">
-                <?php
+  </div>
+  <div class="owl-carousel new owl-theme">
+    <div class="card-container">
+      <?php
                 foreach ($items as $item) {
                   echo
                   '
                       <div class="card item-card product-item">
                         <a class="card-title" href="item.php/?id='.$item['id'].'">
-                          <img class="card-img-top" src="' . $item['image'] . '" alt="Card image cap">
+                          <img class="card-img-top" width="200px" height="300px" src="' . $item['image'] . '" alt="Card image cap">
                         </a>
 
                         <div class="card-body">
@@ -108,7 +112,7 @@
                           </a>
 
                           <a class="card-title" href="item.php/?id='.$item['id'].'">
-                            <p class="card-text">Giá: '. $item['price'] .' VND</p>
+                            <p class="card-text font-weight-bold">' . number_format($item['price']) . 'đ</p>
                           </a>
 
                           <a class="card-title" href="item.php/?id='.$item['id'].'">
@@ -128,29 +132,28 @@
                 }
                 
                 ?>
-                </div>
-                <script>
-                  const addToCart = (id) => {
-                    fetch('/cart.php?action=add', {
-                      method: 'POST', // or 'PUT'
-                      body: (() => {
-                        var formData = new FormData();
-                        formData.append(`quantity[${id}]`, 1);
-                        return formData;
-                      })()
-                    })
-                    .then(response => {
-                      alert("Thêm vào giỏ hàng thành công!"); 
-                    })
-                    .catch(error => {
-                      alert("Thêm vào giỏ hàng thất bại!"); 
-                    })
-                  }
-                </script>
-            </div>
-      </div>
+    </div>
+    <script>
+    const addToCart = (id) => {
+      fetch('/cart.php?action=add', {
+          method: 'POST', // or 'PUT'
+          body: (() => {
+            var formData = new FormData();
+            formData.append(`quantity[${id}]`, 1);
+            return formData;
+          })()
+        })
+        .then(response => {
+          alert("Thêm vào giỏ hàng thành công!");
+        })
+        .catch(error => {
+          alert("Thêm vào giỏ hàng thất bại!");
+        })
+    }
+    </script>
+  </div>
+</div>
 </div>
 <div>
   <?php include"layout/pagination.php";?>
 </div>
-
