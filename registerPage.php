@@ -79,10 +79,17 @@ if (isset($_POST['account'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/login-register.css">
   <title>Đăng kí</title>
@@ -91,7 +98,8 @@ if (isset($_POST['account'])) {
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/index.php">YG SHOP</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -111,7 +119,8 @@ if (isset($_POST['account'])) {
       </ul>
     </div>
     <form class="form-inline" action="index.php" method="GET">
-      <input class="form-control mr-sm-2" type="text" placeholder="Nhập vào sản phẩm" aria-label="Search" value="" name="search" />
+      <input class="form-control mr-sm-2" type="text" placeholder="Nhập vào sản phẩm" aria-label="Search" value=""
+        name="search" />
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Tìm">Tìm kiếm</button>
     </form>
   </nav>
@@ -123,8 +132,8 @@ if (isset($_POST['account'])) {
 
       <form method="POST" action="registerPage.php" autocomplete="off">
         <div class="form-group">
-          <div class="label">Name</div>
-          <input name="name" type="text" class="form-control" placeholder="Your name..." value="<?php
+          <div class="label">Tên</div>
+          <input name="name" type="text" class="form-control" placeholder="Nhập tên của bạn" value="<?php
                                                                                                 if (isset($_POST['name']) and $_POST['name'] !== '')
                                                                                                   echo htmlspecialchars($_POST['name']);
                                                                                                 ?>" required>
@@ -132,21 +141,22 @@ if (isset($_POST['account'])) {
         </div>
         <div class="form-group">
           <div class="label">Email</div>
-          <input name="email" type="email" class="form-control" placeholder="Your email address..." value="<?php
+          <input name="email" type="email" class="form-control" placeholder="Nhập email của bạn" value="<?php
                                                                                                             if (isset($_POST['email']) and $_POST['email'] !== '') echo htmlspecialchars($_POST['email']);
-                                                                                                            ?>" required>
+                                                                                                            ?>"
+            required>
           <div class="error-msg"><?php if (in_array('email', $error_codes)) echo $error_msgs['email']; ?></div>
         </div>
         <div class="form-group">
-          <div class="label">Phone number</div>
-          <input name="phone" type="text" class="form-control" placeholder="Your phone number..." value="<?php
+          <div class="label">Số điện thoại</div>
+          <input name="phone" type="text" class="form-control" placeholder="Nhập số điện thoại của bạn" value="<?php
                                                                                                           if (isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']);
                                                                                                           ?>" required>
           <div class="error-msg"><?php if (in_array('phone', $error_codes)) echo $error_msgs['phone']; ?></div>
         </div>
         <div class="form-group">
-          <div class="label">Account</div>
-          <input name="account" type="text" class="form-control" placeholder="Your username..." value="<?php
+          <div class="label">Username</div>
+          <input name="account" type="text" class="form-control" placeholder="Nhập username của bạn" value="<?php
                                                                                                         if (isset($_POST['account'])) echo htmlspecialchars($_POST['account']);
                                                                                                         ?>" required>
           <div class="error-msg">
@@ -160,33 +170,39 @@ if (isset($_POST['account'])) {
           </div>
         </div>
         <div class="form-group">
-          <div class="label">Password</div>
-          <input name="pass" type="password" class="form-control" placeholder="Your password..." required>
+          <div class="label">Mật khẩu</div>
+          <input name="pass" type="password" class="form-control" placeholder="Nhập mật khẩu của bạn" required>
           <div class="error-msg"><?php if (in_array('password', $error_codes)) echo $error_msgs['password']; ?></div>
         </div>
         <div class="form-group">
-          <div class="label">Confirm password</div>
-          <input name="confirmpass" type="password" class="form-control" placeholder="Confirm password..." required>
-          <div class="error-msg"><?php if (in_array('confirm_pass', $error_codes)) echo $error_msgs['confirm_pass']; ?></div>
+          <div class="label">Xác thực mật khẩu</div>
+          <input name="confirmpass" type="password" class="form-control" placeholder="Nhập lại mật khẩu" required>
+          <div class="error-msg"><?php if (in_array('confirm_pass', $error_codes)) echo $error_msgs['confirm_pass']; ?>
+          </div>
         </div>
         <div class="btn-wrapper">
           <button class="btn btn-primary mb-2" type="submit">Đăng ký</button>
         </div>
       </form>
-      </div>
+    </div>
   </div>
   <footer class="footer-container">
     <div class="container">
       <!--Bắt Đầu Nội Dung Giới Thiệu-->
       <div class="noi-dung about">
-        <h2>YOUNG GREEN</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <ul class="social-icon">
+        <h2>YG SHOP</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.</p>
+        <!-- <ul class="social-icon">
           <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <li><a href=""><i class="fa fa-twitter" target="_blank"></i></a></li>
           <li><a href=""><i class="fa fa-instagram" target="_blank"></i></a></li>
           <li><a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a></li>
-        </ul>
+        </ul> -->
       </div>
       <!--Kết Thúc Nội Dung Giới Thiệu-->
       <!--Bắt Đầu Nội Dung Đường Dẫn-->
@@ -218,20 +234,20 @@ if (isset($_POST['account'])) {
         <ul class="info">
           <li>
             <span><i class="fa fa-map-marker"></i></span>
-            <span>Đường Số 1<br />
-              Quận 1, Thành Phố Hồ Chí Minh<br />
+            <span>268 Lý Thường Kiệt<br />
+              Quận 10, Thành Phố Hồ Chí Minh<br />
               Việt Nam</span>
           </li>
           <li>
             <span><i class="fa fa-phone"></i></span>
-            <p><a href="#">+84 123 456 789</a>
+            <p><a href="#">+84 xxx xxx xxx</a>
               <br />
-              <a href="#">+84 987 654 321</a>
+              <a href="#">+84 xxx xxx xxx</a>
             </p>
           </li>
           <li>
             <span><i class="fa fa-envelope"></i></span>
-            <p><a href="#">diachiemail@gmail.com</a></p>
+            <p><a href="#">hoang@gmail.com</a></p>
           </li>
           <li>
             <form class="form">
