@@ -97,7 +97,7 @@ if (isset($_POST['account'])) {
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/index.php">YG SHOP</a>
+    <a class="navbar-brand" href="/index.php">ZFashion SHOP</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -190,7 +190,7 @@ if (isset($_POST['account'])) {
     <div class="container">
       <!--Bắt Đầu Nội Dung Giới Thiệu-->
       <div class="noi-dung about">
-        <h2>YG SHOP</h2>
+        <h2>ZFashion SHOP</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
           industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into

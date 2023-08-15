@@ -29,7 +29,7 @@
         '
         <div class="account">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index.php">YG SHOP</a>
+        <a class="navbar-brand" href="/index.php">ZFashion SHOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,7 +61,7 @@
         echo'
         <div class="account">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index.php">YG SHOP</a>
+        <a class="navbar-brand" href="/index.php">ZFashion SHOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,7 +102,7 @@
 
   <div class="content-container" style="margin-top: 2rem;">
     <div class="small-title">
-      YG Shop - Ấn tượng với phong cách thời trang streetwear
+      ZFashion Shop - Ấn tượng với phong cách thời trang streetwear
     </div>
     <img src="./image/sp23.png">
     <h3>Phong cách thời trang streetwear hay còn gọi là phong cách đường phố là một trong những xu hướng cực kỳ phổ biến
@@ -111,7 +111,8 @@
     <p>
       Đây là một trong những phong cách có nhiều sự ảnh hưởng đặc biệt là giới trẻ. Với các gam màu tiêu biểu xám, trắng
       và đen kèm theo thiết kế có phần bụi bặm đã giúp cho phong cách này có chỗ đứng nhất định trong làng thời trang
-      cũng như có sức ảnh hưởng nhất định với việc ra đời của các thương hiệu thời trang nổi tiếng, và YG Shop là một
+      cũng như có sức ảnh hưởng nhất định với việc ra đời của các thương hiệu thời trang nổi tiếng, và ZFashion Shop là
+      một
       trong những thương hiệu đó.
     </p>
     <img src="./image/sp8.png">
@@ -122,37 +123,45 @@
     </p>
     <img src="./image/sp11.png">
     <p>
-      Khi mới ra mắt, YG Shop gây ấn tượng bởi phong cách streetwear đơn giản và phóng khoáng. Các tín đồ thời trang có
-      thể tự do thể hiện cá tính và tạo nên xu hướng mới. Vẻ "ngầu" tự nhiên cùng điểm nhấn trong phong cách streetwear
-      đã giúp cho YG Shop chiếm được tình cảm của nhiều người, đặc biệt là các bạn trẻ.
+      Khi mới ra mắt, ZFashion Shop gây ấn tượng bởi phong cách streetwear đơn giản và phóng khoáng. Các tín đồ thời
+      trang có thể tự do thể hiện cá tính và tạo nên xu hướng mới. Vẻ "ngầu" tự nhiên cùng điểm nhấn trong phong cách
+      streetwear đã giúp cho ZFashion Shop chiếm được tình cảm của nhiều người, đặc biệt là các bạn trẻ.
     </p>
     <img src="./image/sp16.png">
     <p>
-      Các thiết kế tại YG Shop đều có tính ứng dụng cao, dễ dàng mix&match nhưng không vì thế mà trở nên nhạt nhòa, luôn
-      có những chi tiết artwork đầy chất "nghệ" để bạn trông thật nổi bật, cá tính ở bất cứ nơi đâu. Và đây cũng là cách
-      để làm nên dấu ấn mang tính đặc trưng của YG Shop trên thị trường.
+      Các thiết kế tại ZFashion Shop đều có tính ứng dụng cao, dễ dàng mix&match nhưng không vì thế mà trở nên nhạt
+      nhòa, luôn có những chi tiết artwork đầy chất "nghệ" để bạn trông thật nổi bật, cá tính ở bất cứ nơi đâu. Và đây
+      cũng là cách để làm nên dấu ấn mang tính đặc trưng của ZFashion Shop trên thị trường.
     </p>
     <img src="./image/sp9.png">
     <p>
-      Thời trang nói lên cá tính của mỗi người và YG Shop cũng không ngoại lệ: "Khi xây dựng YG Shop điều đầu tiên mình
+      Thời trang nói lên cá tính của mỗi người và ZFashion Shop cũng không ngoại lệ: "Khi xây dựng ZFashion Shop điều
+      đầu tiên
+      mình
       nghĩ đến đó chính là khách hàng phải cảm thấy tự tin khi sử dụng sản phẩm thuộc brand của mình. Đó chắc chắn là
-      một điều không thể tách rời. Tính đến thời điểm hiện tại, YG Shop là một thương hiệu mà khi khách hàng sử dụng sẽ
-      cảm thấy thoải mái và tự tin với chất lượng sản phẩm, những outfit của YG Shop đủ đặc trưng, đủ khác biệt giữa rất
-      nhiều streetwear brand trên thị trường." - Đại diện YG Shop nhấn mạnh.
+      một điều không thể tách rời. Tính đến thời điểm hiện tại, ZFashion Shop là một thương hiệu mà khi khách hàng sử
+      dụng sẽ
+      cảm thấy thoải mái và tự tin với chất lượng sản phẩm, những outfit của ZFashion Shop đủ đặc trưng, đủ khác biệt
+      giữa rất
+      nhiều streetwear brand trên thị trường." - Đại diện ZFashion Shop nhấn mạnh.
     </p>
     <p>
-      Đó là lý do vì sao các item của YG Shop được rất nhiều người ưa chuộng với những sáng tạo không ngừng. Những sản
+      Đó là lý do vì sao các item của ZFashion Shop được rất nhiều người ưa chuộng với những sáng tạo không ngừng. Những
+      sản
       phẩm mới sau này với những ứng dụng mới như công nghệ in, chất liệu hiếm, thiết kế độc đáo khi ra mắt đều được các
       bạn trẻ ủng hộ.
     </p>
     <img src="./image/sp10.png">
     <p>
-      Bên cạnh chất lượng sản phẩm, dịch vụ cũng là một trong những yếu tố quan trọng mà YG Shop đặt lên hàng đầu, đội
-      ngũ luôn lắng nghe khách hàng và cố gắng cải thiện mình qua từng ngày, vì hơn ai hết YG Shop hiểu rõ chính tình
-      cảm, sự tin tưởng của các bạn là động lực để YG Shop phát triển và có chỗ đứng vững chắc như ngày hôm nay.
+      Bên cạnh chất lượng sản phẩm, dịch vụ cũng là một trong những yếu tố quan trọng mà ZFashion Shop đặt lên hàng đầu,
+      đội
+      ngũ luôn lắng nghe khách hàng và cố gắng cải thiện mình qua từng ngày, vì hơn ai hết ZFashion Shop hiểu rõ chính
+      tình
+      cảm, sự tin tưởng của các bạn là động lực để ZFashion Shop phát triển và có chỗ đứng vững chắc như ngày hôm nay.
     </p>
     <p>
-      Trong tương lai, giữ vững kim chỉ nam từ những ngày đầu thành lập, YG Shop sẽ luôn thay đổi mình để phù hợp với
+      Trong tương lai, giữ vững kim chỉ nam từ những ngày đầu thành lập, ZFashion Shop sẽ luôn thay đổi mình để phù hợp
+      với
       thị trường streetwear và cho ra lò những sản phẩm chất lượng cao cùng những thiết kế "đặc trưng" với giá cả hợp lý
       để tất cả các bạn trẻ Việt tự tin diện hàng ngày.
     </p>

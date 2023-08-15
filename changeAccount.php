@@ -41,7 +41,8 @@ if (isset($_POST['oldpass'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/login-register.css">
   <link rel="stylesheet" href="css/footer.css">
   <title>Đổi mật khẩu</title>
@@ -49,13 +50,13 @@ if (isset($_POST['oldpass'])) {
 
 <body>
 
-<?php
+  <?php
 if (!isset($_SESSION["user"]))
     echo
     '
             <div class="account">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.php">YG SHOP</a>
+            <a class="navbar-brand" href="/index.php">ZFashion SHOP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -86,7 +87,7 @@ if (!isset($_SESSION["user"]))
     echo '
             <div class="account">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.php">YG SHOP</a>
+            <a class="navbar-brand" href="/index.php">ZFashion SHOP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -124,20 +125,23 @@ if (!isset($_SESSION["user"]))
   }
   ?>
 
-<div class="login my-5 px-3 w-lg-25 container-fluid">
+  <div class="login my-5 px-3 w-lg-25 container-fluid">
     <div>
       <h4>Xin chào <?= $_SESSION["user"] ?> , bạn đang đổi mật khẩu </h4>
     </div>
     <div>
       <form method="POST" action="changeAccount.php" autocomplete="off">
         <div class="form-group mb-4">
-          <input name="oldpass" type="password" class="form-control" id="password1" placeholder="Old password..." required>
+          <input name="oldpass" type="password" class="form-control" id="password1" placeholder="Old password..."
+            required>
         </div>
         <div class="form-group mb-4">
-          <input name="newpass" type="password" class="form-control" id="password1" placeholder="New password..." required>
+          <input name="newpass" type="password" class="form-control" id="password1" placeholder="New password..."
+            required>
         </div>
         <div class="form-group mb-4">
-          <input name="confirmpass" type="password" class="form-control" id="password1" placeholder="Confirm new password..." required>
+          <input name="confirmpass" type="password" class="form-control" id="password1"
+            placeholder="Confirm new password..." required>
         </div>
         <div class="error-msg">
           <?php if ($error_message) echo $error_message; ?>
@@ -155,7 +159,12 @@ if (!isset($_SESSION["user"]))
       <!--Bắt Đầu Nội Dung Giới Thiệu-->
       <div class="noi-dung about">
         <h2>YOUNG GREEN</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+          PageMaker including versions of Lorem Ipsum.</p>
         <ul class="social-icon">
           <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
           <li><a href=""><i class="fa fa-twitter" target="_blank"></i></a></li>
