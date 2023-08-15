@@ -75,7 +75,7 @@
         </div>
         <?php
                     if (isset($_GET["id"])) {
-                        require_once("services/connect_db.php");
+                        require_once("../services/connect_db.php");
                         $id = $_GET["id"];
                         $query = "DELETE from comments where id='$id'";
                         mysqli_query($connect, $query);
@@ -84,7 +84,7 @@
                     ?>
         <?php
                     session_start();
-                    require_once("services/connect_db.php");
+                    require_once("../services/connect_db.php");
                     $query =  "SELECT * from comments";
                     $result = mysqli_query($connect, $query);
                     $data = [];
