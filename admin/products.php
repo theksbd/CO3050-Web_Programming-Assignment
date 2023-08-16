@@ -34,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/users2.php">Quản lý tài khoản</a>
+                            <a class="nav-link" href="/admin/users.php">Quản lý tài khoản</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/products2.php">Quản lý sản phẩm</a>
+                            <a class="nav-link" href="/admin/products.php">Quản lý sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/comments2.php">Đánh giá</a>
+                            <a class="nav-link" href="/admin/comments.php">Đánh giá</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/loginPage2.php">Đăng xuất</a>
+                            <a class="nav-link" href="/loginPage.php">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>
@@ -97,7 +97,7 @@
                         height: 90%"src="<?php echo $item['image'] ?>"></div>
                         <div class="cart-totalperItem a-center" style="width: 25%; padding:1%;"><?php echo $item['description'] ?></div>
                         <div class="cart-delete a-center" style="width: 15%">
-                            <a class="btn btn-primary update-button" href="update2.php?id=<?php echo $item['id'] ?>">Cập nhật</a>
+                            <a class="btn btn-primary update-button" href="update.php?id=<?php echo $item['id'] ?>">Cập nhật</a>
                             <a class="btn btn-secondary delete-button" href="?id=<?php echo $item['id'] ?>">Xóa</a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form method="POST" action="products2.php" autocomplete="off">
+                            <form method="POST" action="products.php" autocomplete="off">
                                 <div class="modal-info" >
                                     <input name="name" type="text" class="form-control" placeholder="Tên sản phẩm" required>
                                 </div>

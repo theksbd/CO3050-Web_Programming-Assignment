@@ -20,7 +20,7 @@
     $query = "select * from db_products where id='$id'";
     $result = mysqli_query($connect, $query);
     $item = mysqli_fetch_array($result);
-    require_once "layout/navigation2.php";
+    require_once "layout/navigation.php";
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@
                         <button class="quantity-btn" onclick="decrement()">&#9660</button>
                     </div>
                     <div class="quantity-form">
-                        <form method="POST" action="/cart2.php?action=add" autocomplete="off">
+                        <form method="POST" action="/cart.php?action=add" autocomplete="off">
                             <?php echo '<input id="demoInput" type="number" min=0 max=100 value="1" name="quantity[' . $item['id'] .']">' ?>
                             <input class="btn btn-primary buy-btn" type="submit" value="Mua sản phẩm">
                         </form>
@@ -117,7 +117,7 @@
                 } else {
             ?>
                     <div class="comment-header">
-                        <h3>Đánh giá sản phẩm: </h2>
+                        <h3>Đánh giá sản phẩm: </h3>
                         <h3 class="comment-number" style="font-style:italic">(<?=mysqli_num_rows($allCommentsOfProducts)?> đánh giá)
                         </h3>
                     </div>
@@ -154,7 +154,7 @@
         </div>
     </div>
 
-    <?php include 'layout/footer2.php'; ?>
+    <?php include 'layout/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

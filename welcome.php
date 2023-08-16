@@ -24,7 +24,7 @@
   <?php 
     require_once 'config.php';
     require_once("services/connect_db.php");
-    require_once "layout/navigation2.php";
+    require_once "layout/navigation.php";
 
     ?>
 
@@ -67,7 +67,7 @@
   </div>
 
 
-  <?php require_once "layout/footer2.php" ?>
+  <?php require_once "layout/footer.php" ?>
 </body>
 
 </html>

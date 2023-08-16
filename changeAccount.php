@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 if (!isset($_SESSION["user"])) {
-  header("location: ./index2.php");
+  header("location: ./index.php");
   return;
 }
 
@@ -32,7 +32,7 @@ if (isset($_POST['oldpass'])) {
   }
   $connect->close();
 }
-require_once "layout/navigation2.php";
+require_once "layout/navigation.php";
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ require_once "layout/navigation2.php";
     <div class="container">
       <!--Bắt Đầu Nội Dung Giới Thiệu-->
       <div class="noi-dung about">
-        <h2>YOUNG GREEN</h2>
+        <h2>ZFASHION SHOP</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <ul class="social-icon">
           <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>

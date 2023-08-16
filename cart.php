@@ -3,7 +3,7 @@ require_once 'config.php';
 
 if (!isset($_SESSION["user"])) {
 	$_SESSION["cart"] = array();
-	header ("Location: ./loginPage2.php");
+	header ("Location: ./loginPage.php");
 }
 
 if (!isset($_SESSION["cart"])){
@@ -25,7 +25,7 @@ switch($_GET['action']){
 		if (isset($_GET['id'])) {
 			unset($_SESSION["cart"][$_GET['id']]);
 		}
-		header("location: ./cart2.php");
+		header("location: ./cart.php");
 		break;
 	case "submit":
 		if (isset($_POST['update'])) {
@@ -38,7 +38,7 @@ switch($_GET['action']){
 				unset($_SESSION["cart"][$id]);
 			}
 		}
-		header("location: ./cart2.php");
+		header("location: ./cart.php");
 		break;
 }    
 }
@@ -69,7 +69,7 @@ if(!empty($_SESSION["cart"])){
 
 <body>
 
-  <?php include"./layout/navigation2.php";?>
+  <?php include"./layout/navigation.php";?>
 
   <div class="container">
 
@@ -86,7 +86,7 @@ if(!empty($_SESSION["cart"])){
         <div class="cart-delete a-center" style="width: 7%"></div>
       </div>
 
-      <form method="POST" action="cart2.php?action=submit" autocomplete="off">
+      <form method="POST" action="cart.php?action=submit" autocomplete="off">
         <?php
 				$totalMoney = 0;
 				if(!empty($data)){
@@ -98,7 +98,7 @@ if(!empty($_SESSION["cart"])){
 							<div class="cart-name a-left" style="width: 50%">
 								<img class="my-img" src="' . $item['image'] . '" alt="Card image cap" >
 								<div class="cart-product-name">
-									<a href="item2.php/?id='.$item['id'].'">' . $item['name'] . '</a>
+									<a href="item.php/?id='.$item['id'].'">' . $item['name'] . '</a>
 								</div>
 							</div>
 							
@@ -110,7 +110,7 @@ if(!empty($_SESSION["cart"])){
 							
 							<div class="cart-totalperItem a-center" style="width: 14%">'. number_format($item['price'] * $_SESSION["cart"][$item['id']]) .' VND</div>
 							<div class="cart-delete a-center" style="width: 7%">
-								<a href="cart2.php?action=delete&id='.$item['id'].'"> Xóa </a>
+								<a href="cart.php?action=delete&id='.$item['id'].'"> Xóa </a>
 							</div>
 						</div>
 						';
@@ -122,7 +122,7 @@ if(!empty($_SESSION["cart"])){
 
         <div class="total">
           <div class="continue-shopping">
-            <a href="/index2.php" class="btn btn-outline-success">Tiếp tục mua hàng</a>
+            <a href="/index.php" class="btn btn-outline-success">Tiếp tục mua hàng</a>
           </div>
 
           <div class="confirm-cart">
@@ -138,7 +138,7 @@ if(!empty($_SESSION["cart"])){
 
   </div>
 
-  <?php include 'layout/footer2.php'; ?>
+  <?php include 'layout/footer.php'; ?>
 
 </body>
 

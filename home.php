@@ -6,9 +6,9 @@
         if ($search === "") {
 
             if (isset($_GET["page"])) {
-                header("location: ./index2.php?page=" . $_GET["page"]);
+                header("location: ./index.php?page=" . $_GET["page"]);
             } else {
-                header("location: ./index2.php");
+                header("location: ./index.php");
             }
         }
 
@@ -79,7 +79,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/home2.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -90,7 +90,7 @@
 <div class="container" style="margin-top: 2rem;">
     <div class="tim-kiem">
         <h5>Tìm sản phẩm bạn thích:</h5>
-        <form class="row g-3" action="index2.php" method="GET">
+        <form class="row g-3" action="index.php" method="GET">
             <div class="col-auto">
                 <input type="text" class="form-control" placeholder="Tìm tên sản phẩm" aria-label="Search" value="" name ="search">
             </div>
@@ -117,27 +117,27 @@
             foreach ($items as $item) {
         ?>
                 <div class="card item-card product-item">
-                    <a class="card-title" href="item2.php/?id=<?php echo $item['id'] ?>">
+                    <a class="card-title" href="item.php/?id=<?php echo $item['id'] ?>">
                         <div style="width:286.4px;height:300px;">
                             <?php echo '<img class="card-img-top" width="200px" height="300px" src="' . $item['image'] . '" alt="Card image cap">' ?>
                         </div>
                     </a>
 
                     <div class="card-body">
-                        <a class="card-title" href="item2.php/?id=<?php echo $item['id'] ?>">
+                        <a class="card-title" href="item.php/?id=<?php echo $item['id'] ?>">
                             <?php echo '<p class="card-title font-weight-bold">' . $item['name'] . '</p>' ?>
                         </a>
 
-                        <a class="card-title" href="item2.php/?id=<?php echo $item['id'] ?>">
+                        <a class="card-title" href="item.php/?id=<?php echo $item['id'] ?>">
                             <?php echo '<p class="card-text font-weight-bold">' . number_format($item['price']) . 'đ</p>' ?>
                         </a>
 
-                        <a class="card-title" href="item2.php/?id=<?php echo $item['id'] ?>">
+                        <a class="card-title" href="item.php/?id=<?php echo $item['id'] ?>">
                             <?php echo '<p class="card-text">'.$item['description'].'</p>' ?>
                         </a>
                         <br/>
 
-                        <form class="form-buy-now" method="POST" action="/cart2.php?action=add" autocomplete="off">
+                        <form class="form-buy-now" method="POST" action="/cart.php?action=add" autocomplete="off">
                             <?php echo '<input type="hidden" value="1" name="quantity[' . $item['id'] .']">' ?>
                             <input class="btn btn-primary" type="submit" value="Mua ngay">
                         </form>
@@ -151,7 +151,7 @@
     </div>
     <script>
         const addToCart = (id) => {
-            fetch('/cart2.php?action=add', {
+            fetch('/cart.php?action=add', {
                 method: 'POST',
                 body: (() => {
                     var formData = new FormData();
@@ -171,5 +171,5 @@
 </div>
 </div>
 <div>
-    <?php require_once "layout/pagination2.php";?>
+    <?php require_once "layout/pagination.php";?>
 </div>

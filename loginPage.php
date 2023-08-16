@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 if (isset($_SESSION["user"])) {
-  header("location: ./index2.php");
+  header("location: ./index.php");
   return;
 }
 
@@ -12,7 +12,7 @@ if (isset($_POST['account'])) {
   $account = htmlspecialchars($_POST['account']);
   $pass = htmlspecialchars(md5($_POST['pass']));
   if ($account == "admin") {
-    header("location: ./admin/index2.php");
+    header("location: ./admin/index.php");
   } else {
     require_once("services/connect_db.php");
     $stmt = $connect->prepare('SELECT * FROM db_user WHERE ACCOUNT = ? AND PASS = ?');
@@ -23,7 +23,7 @@ if (isset($_POST['account'])) {
     $result = $stmt->get_result();
     if (mysqli_num_rows($result) > 0) {
       $_SESSION["user"] = $account;
-      header("location: ./index2.php");
+      header("location: ./index.php");
     } else {
       $error_message = "Bạn nhập sai tài khoản hoặc mật khẩu.";
     }
@@ -56,16 +56,16 @@ if (isset($_POST['account'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index2.php">Home</a>
+                    <a class="nav-link" href="/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/welcome2.php">Giới thiệu</a>
+                    <a class="nav-link" href="/welcome.php">Giới thiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/loginPage2.php">Đăng nhập</a>
+                    <a class="nav-link" href="/loginPage.php">Đăng nhập</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/registerPage2.php">Đăng ký</a>
+                    <a class="nav-link" href="/registerPage.php">Đăng ký</a>
                 </li>
             </ul>
             </div>
@@ -78,7 +78,7 @@ if (isset($_POST['account'])) {
       <h3 class="mb-0">Đăng nhập</h3>
     </div>
     <div>
-      <form method="POST" action="loginPage2.php" autocomplete="off">
+      <form method="POST" action="loginPage.php" autocomplete="off">
         <div class="form-group mb-4">
           <div class="label">Username</div>
           <input name="account" type="text" class="form-control" id="email1" placeholder="Nhập username của bạn" value="<?php
@@ -107,7 +107,7 @@ if (isset($_POST['account'])) {
     </div>
   </div>
   
-  <?php require_once "layout/footer2.php" ?>
+  <?php require_once "layout/footer.php" ?>
 </body>
 
 </html>

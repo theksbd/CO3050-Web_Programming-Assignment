@@ -21,16 +21,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/users2.php">Quản lý tài khoản</a>
+                            <a class="nav-link" href="/admin/users.php">Quản lý tài khoản</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/products2.php">Quản lý sản phẩm</a>
+                            <a class="nav-link" href="/admin/products.php">Quản lý sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/comments2.php">Đánh giá</a>
+                            <a class="nav-link" href="/admin/comments.php">Đánh giá</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/loginPage2.php">Đăng xuất</a>
+                            <a class="nav-link" href="/loginPage.php">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

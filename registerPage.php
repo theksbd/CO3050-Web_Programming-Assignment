@@ -7,12 +7,12 @@ if (isset($_SESSION["user"])) {
 }
 
 $error_msgs = [
-  'name' => 'Name must has 3-30 characters',
+  'name' => 'Name must have 3-30 characters',
   'email' => 'Invalid email',
   'phone' => 'Phone number must be number only and has 10-11 characters',
-  'account' => 'Account must has 3-30 characters',
-  'password' => 'Password must has 3-30 characters',
-  'confirm_pass' => 'Confirm passwod does not match password',
+  'account' => 'Account must have 3-30 characters',
+  'password' => 'Password must have 3-30 characters',
+  'confirm_pass' => 'Confirm password does not match password',
   'duplicate_account' => 'Account already exists, please enter a different account',
 ];
 
@@ -96,16 +96,16 @@ if (isset($_POST['account'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index2.php">Home</a>
+                    <a class="nav-link" href="/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/welcome2.php">Giới thiệu</a>
+                    <a class="nav-link" href="/welcome.php">Giới thiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/loginPage2.php">Đăng nhập</a>
+                    <a class="nav-link" href="/loginPage.php">Đăng nhập</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/registerPage2.php">Đăng ký</a>
+                    <a class="nav-link" href="/registerPage.php">Đăng ký</a>
                 </li>
             </ul>
             </div>
@@ -118,7 +118,7 @@ if (isset($_POST['account'])) {
     </div>
     <div>
 
-      <form method="POST" action="registerPage2.php" autocomplete="off">
+      <form method="POST" action="registerPage.php" autocomplete="off">
         <div class="form-group">
           <div class="label">Tên</div>
           <input name="name" type="text" class="form-control" placeholder="Nhập tên của bạn" value="<?php
@@ -174,7 +174,7 @@ if (isset($_POST['account'])) {
     </div>
   </div>
   
-  <?php require_once "layout/footer2.php" ?>
+  <?php require_once "layout/footer.php" ?>
 </body>
 
 </html>
