@@ -1,6 +1,6 @@
 <?php
   $id = $_GET["id"];
-  require_once("../services/connect_db.php");
+  require_once("services/connect_db.php");
   $item = mysqli_fetch_array($connect->query("SELECT * from db_products WHERE id='$id'"));
 ?>
 <?php
@@ -9,7 +9,7 @@
     $price = $_POST['price'];
     $image = $_POST['image'];
     $description = $_POST['description'];
-    require_once("../services/connect_db.php");
+    require_once("services/connect_db.php");
     $updateQuery = "UPDATE db_products set name='$name',price = $price,image='$image',
     description='$description' where id='$id'";
     $result1 =  mysqli_query($connect, $updateQuery);

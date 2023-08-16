@@ -4,7 +4,7 @@
         $price = $_POST['price'];
         $image = $_POST['image'];
         $description = $_POST['description'];
-        require_once("../services/connect_db.php");
+        require_once("services/connect_db.php");
         $query1 = "INSERT into db_products(name,price,image,description) 
         values('".$name."','".$price."','".$image."','" . $description . "') ";
         $result1 = mysqli_query($connect, $query1);
@@ -96,7 +96,7 @@
                     ?>
         <?php
                     session_start();
-                    require_once("../services/connect_db.php");
+                    require_once("services/connect_db.php");
                     $query =  "SELECT * from db_products";
                     $result = mysqli_query($connect, $query);
                     $data = [];

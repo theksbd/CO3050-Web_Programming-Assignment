@@ -1,5 +1,5 @@
 <?php
-    require_once("../services/connect_db.php");
+    require_once("services/connect_db.php");
     if (!isset($_SESSION["user"])){
         echo
         '
