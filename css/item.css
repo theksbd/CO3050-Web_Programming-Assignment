@@ -5,12 +5,13 @@
 }
 .product-container{
     display:flex;
+    flex-wrap: wrap;
     gap:50px;
 }
 .product-content{
     display:flex;
     flex-direction: column;
-    width: 600px;
+    width: 400px;
 }
 .content-name{
     font-size: 25px;
@@ -25,7 +26,7 @@
 }
 .product-image{
     height: 468px;
-    width: 468px;
+    width: 388px;
 }
 .boxed label {
     display: inline-block;
@@ -40,7 +41,7 @@
 }
   
 .boxed input[type="radio"]:checked + label {
-    border: solid 2px #FFAC4B;
+    border: solid 1px #0d6efd;
 }
 .change-quantity{
     display:flex;
@@ -69,15 +70,16 @@ input::-webkit-inner-spin-button {
     margin-left: 1em;
 }
 .comment-container{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80%;
+    margin-left: 0;
+    /* margin-right: auto; */
 }
 .comment-header{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1em;
+    margin-top: 20px;
 }
 .comment-number{
     font-size: 20px;
